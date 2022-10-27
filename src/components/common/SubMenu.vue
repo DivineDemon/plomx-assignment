@@ -22,7 +22,9 @@
     </div>
     <!-- Add Check -->
     <div class="flex">
-      <button class="rounded-md bg-[#0b84fe] text-white py-2 px-3">
+      <button
+        class="rounded-md bg-[#0b84fe] text-white py-2 px-3 font-semibold"
+      >
         Add Check
       </button>
     </div>

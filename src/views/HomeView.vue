@@ -3,9 +3,12 @@
     <NavBar />
     <SubMenu />
     <div class="mt-5 grid place-items-center">
-      <!-- Inspection Check -->
-      <InspectionEmpty />
-      <!-- Inspection -->
+      <div class="flex flex-row space-x-3">
+        <!-- Inspection List -->
+        <InspectionList />
+        <!-- Inspection Options -->
+        <InspectionOptions />
+      </div>
     </div>
   </div>
 </template>
@@ -13,14 +16,16 @@
 <script>
 import NavBar from "@/components/common/NavBar";
 import SubMenu from "@/components/common/SubMenu";
-import InspectionEmpty from "@/components/InspectionEmpty";
+import InspectionList from "@/components/InspectionList";
+import InspectionOptions from "@/components/InspectionOptions.vue";
 
 export default {
   name: "HomeView",
   components: {
     NavBar,
     SubMenu,
-    InspectionEmpty,
+    InspectionList,
+    InspectionOptions,
   },
 };
 </script>
