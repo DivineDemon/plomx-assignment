@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import NavBar from "@/components/common/NavBar.vue";
-import SubMenu from "@/components/common/SubMenu.vue";
-import InspectionEmpty from "@/components/InspectionEmpty.vue";
+import NavBar from "@/components/common/NavBar";
+import SubMenu from "@/components/common/SubMenu";
+import InspectionEmpty from "@/components/InspectionEmpty";
 
 export default {
   name: "HomeView",
