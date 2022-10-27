@@ -23,14 +23,15 @@
       </div>
       <!-- Nav Links -->
       <div class="flex-1 ml-12 p-1">
-        <ul
-          v-for="(item, index) in items"
-          :key="index"
-          class="flex flex-row space-x-12"
-        >
+        <ul class="flex flex-row space-x-12">
           <li
+            v-for="(item, index) in items"
+            :key="index"
             class="flex"
-            :class="{ activeStyle: active === item.name }"
+            :class="{
+              'bg-sky-100 text-sm text-[#0b84fe] py-1 px-3 rounded-md':
+                active === item.name,
+            }"
             @click="setActive(item.name)"
           >
             <router-link :to="item.link">{{ item.name }}</router-link>
@@ -72,24 +73,23 @@ export default {
   name: "NavBar",
   data() {
     return {
-      activeStyle: "bg-sky-100 text-sm text-[#0b84fe] py-1 px-3 rounded-md",
       active: "Orders",
       items: [
         {
           name: "Orders",
-          link: "/orders",
+          link: "/",
         },
         {
           name: "Shipments",
-          link: "/shipments",
+          link: "/",
         },
         {
           name: "Products",
-          link: "/products",
+          link: "/",
         },
         {
           name: "Manufacturers",
-          link: "/manufacturers",
+          link: "/",
         },
       ],
     };
