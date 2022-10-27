@@ -29,7 +29,7 @@
             :key="index"
             class="flex"
             :class="{
-              'bg-sky-100 text-sm text-[#0b84fe] py-1 px-3 rounded-md':
+              'bg-sky-100 text-sm text-[#0b84fe] text-primary py-1 px-3 rounded-md':
                 active === item.name,
             }"
             @click="setActive(item.name)"
