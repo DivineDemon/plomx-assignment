@@ -10,19 +10,22 @@
         <InspectionOptions />
       </div>
     </div>
+    <SideBar />
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/common/NavBar";
 import SubMenu from "@/components/common/SubMenu";
-import InspectionList from "@/components/InspectionList";
-import InspectionOptions from "@/components/InspectionOptions.vue";
+import SideBar from "@/components/common/Sidebar/Sidebar";
+import InspectionList from "@/components/Inspection/InspectionList";
+import InspectionOptions from "@/components/Inspection/InspectionOptions";
 
 export default {
   name: "HomeView",
   components: {
     NavBar,
+    SideBar,
     SubMenu,
     InspectionList,
     InspectionOptions,

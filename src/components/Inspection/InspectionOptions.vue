@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import DropDown from "./common/DropDown.vue";
+import DropDown from "../common/DropDown";
 
 export default {
   name: "InspectionOptions",

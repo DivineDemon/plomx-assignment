@@ -15,18 +15,18 @@
       >
         Add first check
       </button>
-      <InspectionItem />
+      <!-- <InspectionItem /> -->
     </div>
   </div>
 </template>
 
 <script>
-import InspectionItem from "./InspectionItem.vue";
+// import InspectionItem from "./InspectionItem";
 
 export default {
   name: "InspectionList",
-  components: {
-    InspectionItem,
-  },
+  // components: {
+  //   InspectionItem,
+  // },
 };
 </script>
