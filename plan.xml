@@ -1,0 +1,20 @@
+<Navbar /> ✅
+<SubMenu /> ✅
+<container>
+  <NewQualityCheck> ⚠️
+    <h1>New quality check</h1>
+    <!-- Inspection Check -->
+    <div>
+      <div v-if="No Inspections">
+        <InspectionEmpty></InspectionEmpty>
+      </div>
+      <div v-else>
+        <InspectionCheck></InspectionCheck>
+      </div>
+    </div>
+    <!-- Inspection -->
+    <div>
+      <Inspection />
+    </div>
+  </NewQualityCheck>
+</container>
