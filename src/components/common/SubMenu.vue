@@ -22,17 +22,18 @@
     </div>
     <!-- Add Check -->
     <div class="flex">
-      <button
-        class="rounded-md bg-[#0b84fe] text-white py-2 px-3 font-semibold"
-      >
-        Add Check
-      </button>
+      <SidebarToggle text="Add Check" />
     </div>
   </div>
 </template>
 
 <script>
+import SidebarToggle from "./SidebarToggle.vue";
+
 export default {
   name: "SubMenu",
+  components: {
+    SidebarToggle,
+  },
 };
 </script>

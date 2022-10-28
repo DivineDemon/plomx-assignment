@@ -10,23 +10,21 @@
           There are no checks selected yet.
         </p>
       </div>
-      <button
-        class="text-white font-semibold text-xs bg-[#0b84fe] py-2 px-3 rounded-sm"
-      >
-        Add first check
-      </button>
+      <SidebarToggle @toggle="$emit('toggle')" text="Add first check" />
       <!-- <InspectionItem /> -->
     </div>
   </div>
 </template>
 
 <script>
+import SidebarToggle from "../common/SidebarToggle.vue";
 // import InspectionItem from "./InspectionItem";
 
 export default {
   name: "InspectionList",
-  // components: {
-  //   InspectionItem,
-  // },
+  components: {
+    // InspectionItem,
+    SidebarToggle,
+  },
 };
 </script>

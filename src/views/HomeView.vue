@@ -5,12 +5,14 @@
     <div class="mt-5 grid place-items-center">
       <div class="flex flex-row space-x-3">
         <!-- Inspection List -->
-        <InspectionList />
+        <InspectionList @toggle="openSidebar()" />
         <!-- Inspection Options -->
         <InspectionOptions />
       </div>
     </div>
-    <SideBar />
+    <template v-if="showSidebar">
+      <SideBar @close="closeSidebar()" />
+    </template>
   </div>
 </template>
 
@@ -29,6 +31,19 @@ export default {
     SubMenu,
     InspectionList,
     InspectionOptions,
+  },
+  data() {
+    return {
+      showSidebar: false,
+    };
+  },
+  methods: {
+    openSidebar() {
+      this.showSidebar = true;
+    },
+    closeSidebar() {
+      this.showSidebar = false;
+    },
   },
 };
 </script>
