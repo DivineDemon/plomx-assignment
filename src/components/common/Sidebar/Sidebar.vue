@@ -25,20 +25,12 @@
       <ul
         class="my-[-90px] px-5 mt-[2px] flex flex-col justify-center items-center align-center space-y-5"
       >
-        <li>
-          <SidebarItem />
-        </li>
-        <li>
-          <SidebarItem />
-        </li>
-        <li>
-          <SidebarItem />
-        </li>
-        <li>
-          <SidebarItem />
-        </li>
-        <li>
-          <SidebarItem />
+        <li
+          v-for="(item, index) in items"
+          :key="index"
+          @click="setActive(item)"
+        >
+          <SidebarItem :type="item" :click="active === item ? true : false" />
         </li>
       </ul>
     </div>
@@ -53,9 +45,25 @@ export default {
   components: {
     SidebarItem,
   },
+  data() {
+    return {
+      active: "",
+      items: [
+        "Barcode check",
+        "Defects check",
+        "Dimensions check",
+        "Packaging check",
+        "Quantity check",
+      ],
+    };
+  },
   methods: {
     closeSidebar() {
       this.$emit("close");
+    },
+    setActive(type) {
+      this.active = type;
+      console.log(this.active);
     },
   },
 };

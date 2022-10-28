@@ -1,5 +1,8 @@
 <template>
-  <div class="border-2 border-gray-300 p-3 rounded-sm text-xs">
+  <div
+    class="border-2 border-gray-300 p-3 rounded-sm text-xs"
+    :class="{ 'border-[#0b84fe]': click }"
+  >
     <div class="mb-2">
       <h1 class="flex flex-row space-x-2 font-bold">
         <svg
@@ -21,7 +24,10 @@
             d="M6.75 6.75h.75v.75h-.75v-.75zM6.75 16.5h.75v.75h-.75v-.75zM16.5 6.75h.75v.75h-.75v-.75zM13.5 13.5h.75v.75h-.75v-.75zM13.5 19.5h.75v.75h-.75v-.75zM19.5 13.5h.75v.75h-.75v-.75zM19.5 19.5h.75v.75h-.75v-.75zM16.5 16.5h.75v.75h-.75v-.75z"
           />
         </svg>
-        <span>Barcode check</span>
+        <div class="flex flex-row space-x-2">
+          <span>{{ type }}</span>
+          <span v-if="click" class="text-[#0b84fe]">Click to add</span>
+        </div>
       </h1>
       <div></div>
     </div>
@@ -35,5 +41,9 @@
 <script>
 export default {
   name: "SidebarItem",
+  props: {
+    click: Boolean,
+    type: String,
+  },
 };
 </script>
