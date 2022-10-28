@@ -71,17 +71,25 @@
           class="text-sm p-2 border border-gray-500 w-64"
         />
       </div>
-      <div class="flex flex-col">
-        <label for="evidence" class="text-xs font-bold text-gray-500"
-          >Evidence</label
+      <div
+        class="flex flex-col cursor-pointer text-white"
+        @click="expectedValue = !expectedValue"
+      >
+        <div
+          class="w-16 h-8 bg-gray-400 rounded-2xl p-1 flex flex-row space-x-1"
         >
-        <p class="text-xs text-gray-500 font-semibold text-justify">
-          When enabled inspector will be required to upload photographic
-          evidence.
-        </p>
-        <input type="checkbox" name="evidence" class="mt-3 mb-5 w-4" />
+          <div
+            class="w-6 h-6 bg-white rounded-2xl"
+            :class="{ 'order-1': expectedValue }"
+          ></div>
+          <div>
+            <p class="font-semibold">
+              {{ expectedValue ? "YES" : "NO" }}
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col mt-5">
         <label for="instructions" class="text-xs font-bold text-gray-500"
           >Instructions</label
         >
@@ -101,5 +109,10 @@
 <script>
 export default {
   name: "CheckForm",
+  data() {
+    return {
+      expectedValue: false,
+    };
+  },
 };
 </script>

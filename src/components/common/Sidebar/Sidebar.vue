@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import CheckForm from "@/components/CheckForm.vue";
+import CheckForm from "@/components/common/Sidebar/CheckForm.vue";
 // import SidebarItem from "./SidebarItem";
 
 export default {
