@@ -21,8 +21,8 @@
           </svg>
         </button>
       </div>
-      <CheckForm />
-      <!-- <h1 class="text-sm font-bold px-5 pb-2 mt-[30px]">Select check to add</h1>
+      <!-- <CheckForm /> -->
+      <h1 class="text-sm font-bold px-5 pb-2 mt-[30px]">Select check to add</h1>
       <ul
         class="my-[-90px] px-5 mt-[2px] flex flex-col justify-center items-center align-center space-y-5"
       >
@@ -33,23 +33,24 @@
         >
           <SidebarItem :type="item" :click="active === item ? true : false" />
         </li>
-      </ul> -->
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
-import CheckForm from "@/components/common/Sidebar/CheckForm.vue";
-// import SidebarItem from "./SidebarItem";
+// import CheckForm from "@/components/common/Sidebar/CheckForm.vue";
+import SidebarItem from "./SidebarItem";
 
 export default {
   name: "SideBar",
   components: {
-    CheckForm,
-    // SidebarItem,
+    // CheckForm,
+    SidebarItem,
   },
   data() {
     return {
+      state: "",
       active: "",
       items: [
         "Barcode check",
