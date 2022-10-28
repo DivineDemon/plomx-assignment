@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex w-[700px] h-screen absolute top-0 right-0 bg-white shadow-md z-50 transition delay-150 duration-300 ease-in-out"
+    class="flex h-screen absolute top-0 right-0 bg-white shadow-md z-50 transition delay-150 duration-300 ease-in-out"
   >
     <div>
       <div class="flex flex-1 border-b-2 p-5 text-gray-400">
@@ -21,7 +21,8 @@
           </svg>
         </button>
       </div>
-      <h1 class="text-sm font-bold px-5 pb-2 mt-[30px]">Select check to add</h1>
+      <CheckForm />
+      <!-- <h1 class="text-sm font-bold px-5 pb-2 mt-[30px]">Select check to add</h1>
       <ul
         class="my-[-90px] px-5 mt-[2px] flex flex-col justify-center items-center align-center space-y-5"
       >
@@ -32,18 +33,20 @@
         >
           <SidebarItem :type="item" :click="active === item ? true : false" />
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </template>
 
 <script>
-import SidebarItem from "./SidebarItem";
+import CheckForm from "@/components/CheckForm.vue";
+// import SidebarItem from "./SidebarItem";
 
 export default {
   name: "SideBar",
   components: {
-    SidebarItem,
+    CheckForm,
+    // SidebarItem,
   },
   data() {
     return {

@@ -29,7 +29,6 @@
           <span v-if="click" class="text-[#0b84fe]">Click to add</span>
         </div>
       </h1>
-      <div></div>
     </div>
     <p class="text-xs text-gray-500 font-semibold text-justify">
       When performing the barcode check inspector will be required locate, scan
