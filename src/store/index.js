@@ -5,11 +5,22 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    count: 0,
+    inspectionChecks: [],
+  },
+  getters: {
+    getAllInspectionChecks(state) {
+      return state.inspectionChecks;
+    },
   },
   mutations: {
-    increment(state) {
-      state.count++;
+    setInspectionChecks(state, payload) {
+      state.inspectionChecks.push(payload);
+    },
+    removeInspectionChecks(state, id) {
+      let itemIndex = state.inspectionChecks.findIndex(
+        (inspectionCheck) => inspectionCheck.id === id
+      );
+      state.inspectionChecks.splice(itemIndex, 1);
     },
   },
 });
