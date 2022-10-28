@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <NavBar />
-    <SubMenu />
+    <SubMenu @toggle="openSidebar()" />
     <div class="mt-5 grid place-items-center">
       <div class="flex flex-row space-x-3">
         <!-- Inspection List -->

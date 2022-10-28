@@ -22,7 +22,7 @@
     </div>
     <!-- Add Check -->
     <div class="flex">
-      <SidebarToggle text="Add Check" />
+      <SidebarToggle @toggle="$emit('toggle')" text="Add Check" />
     </div>
   </div>
 </template>
