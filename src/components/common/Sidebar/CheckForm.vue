@@ -74,20 +74,26 @@
           class="text-sm p-2 border border-gray-500 w-64"
         />
       </div>
+      <label for="expected" class="text-xs font-bold text-gray-500"
+        >Evidence</label
+      >
+      <p class="text-xs text-gray-500 font-semibold text-justify mb-5">
+        When enabled inspector will be required to upload photographic evidence.
+      </p>
       <div
         class="flex flex-col cursor-pointer text-white"
-        @click="expectedValue = !expectedValue"
+        @click="formData.expectedValue = !formData.expectedValue"
       >
         <div
           class="w-16 h-8 bg-gray-400 rounded-2xl p-1 flex flex-row space-x-1"
         >
           <div
             class="w-6 h-6 bg-white rounded-2xl"
-            :class="{ 'order-1': expectedValue }"
+            :class="{ 'order-1': formData.expectedValue }"
           ></div>
           <div>
             <p class="font-semibold mr-0.5">
-              {{ expectedValue ? "YES" : "NO" }}
+              {{ formData.expectedValue ? "YES" : "NO" }}
             </p>
           </div>
         </div>
@@ -114,7 +120,10 @@ export default {
   name: "CheckForm",
   data() {
     return {
-      expectedValue: false,
+      formData: {
+        location: "",
+        expectedValue: false,
+      },
     };
   },
 };
