@@ -121,6 +121,7 @@ export default {
     ...mapMutations(["removeInspectionChecks"]),
     deleted() {
       this.removeInspectionChecks(this.checks.id);
+      this.actionList = false;
     },
     toggleActionList() {
       this.actionList = !this.actionList;

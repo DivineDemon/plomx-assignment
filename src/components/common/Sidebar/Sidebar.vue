@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex h-screen absolute top-0 right-0 bg-white shadow-md z-50 transition delay-150 duration-300 ease-in-out w-[650px]"
+    class="flex h-screen absolute top-0 right-0 bg-white shadow-md z-50 transition delay-150 duration-300 ease-in-out w-screen md:w-[650px]"
   >
     <div class="flex flex-col h-16 border-b-2">
       <!-- Top Bar -->
@@ -9,7 +9,7 @@
       >
         <!-- Close Sidebar -->
         <div class="flex-1">
-          <button @click="$emit('close')">
+          <button @click="$emit('close')" class="cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -45,7 +45,7 @@
       <!-- Content -->
       <div v-if="state === 'barcode'">
         <!-- Check Form -->
-        <div class="w-[600px] h-[600px] m-5">
+        <div class="w-auto h-[600px] m-5">
           <span
             class="flex flex-row mb-5 text-xs text-gray-400 cursor-pointer"
             @click="back"
@@ -105,8 +105,8 @@
               <input
                 type="text"
                 name="location"
-                value="Inside (by Label)"
                 class="text-sm p-2 border border-gray-500 w-64"
+                placeholder="Inside (by Label)"
                 v-model="formData.location"
               />
             </div>
@@ -117,7 +117,7 @@
               <input
                 type="text"
                 name="expected"
-                value="ASd1233de3f-SDDFd"
+                placeholder="ASd1233de3f-SDDFd"
                 class="text-sm p-2 border border-gray-500 w-64"
                 v-model="formData.expectedValue"
               />
@@ -135,6 +135,10 @@
             >
               <div
                 class="w-16 h-8 bg-gray-400 rounded-2xl p-1 flex flex-row space-x-1"
+                :class="{
+                  'w-16 h-8 rounded-2xl p-1 flex flex-row space-x-1 bg-[#0b84fe]':
+                    formData.evidence,
+                }"
               >
                 <div
                   class="w-6 h-6 bg-white rounded-2xl"

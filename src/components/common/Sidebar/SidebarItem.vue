@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border-2 border-gray-300 p-3 rounded-sm text-xs"
+    class="border-2 border-gray-300 p-3 rounded-sm text-xs cursor-pointer"
     :class="{ 'border-[#0b84fe]': click }"
   >
     <div class="mb-2">

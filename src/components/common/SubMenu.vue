@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white border-b-4 border-gray-200 p-4 flex">
+  <div class="bg-white border-b-4 border-gray-200 p-4 flex w-screen">
     <!-- Back to Order -->
     <div class="flex-1">
       <router-link to="/" class="text-gray-500 text-sm flex p-2">

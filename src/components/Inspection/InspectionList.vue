@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h1 class="text-xl font-bold ml-5 mb-3">New quality check</h1>
+  <div class="w-full mt-2.5 md:w-75">
     <div
       class="bg-white border-4 border-gray-200 flex flex-col space-y-4 justify-center items-center align-center p-8"
     >

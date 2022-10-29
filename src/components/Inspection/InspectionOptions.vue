@@ -1,5 +1,5 @@
 <template>
-  <div class="border-4 border-gray-200 mt-10 p-4 w-[350px]">
+  <div class="border-4 border-gray-200 p-4 w-full md:w-25 md:flex-1">
     <h1 class="font-bold text-left">Inspection</h1>
     <DropDown name="Inspector" :options="['Todd Lager']" />
     <hr class="my-8 h-px bg-gray-300 border" />

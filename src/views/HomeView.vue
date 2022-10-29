@@ -3,7 +3,7 @@
     <NavBar />
     <SubMenu @toggle="openSidebar()" />
     <div class="mt-5 grid place-items-center">
-      <div class="flex flex-row space-x-3">
+      <div class="flex flex-col space-y-3 w-full p-5 md:flex-row md:space-x-3">
         <!-- Inspection List -->
         <InspectionList @toggle="openSidebar()" />
         <!-- Inspection Options -->
