@@ -26,7 +26,12 @@
         </svg>
         <div class="flex flex-row space-x-2">
           <span>{{ type }}</span>
-          <span v-if="click" class="text-[#0b84fe]">Click to add</span>
+          <span
+            v-if="click"
+            @click="$emit('showForm')"
+            class="text-[#0b84fe] cursor-pointer"
+            >Click to add</span
+          >
         </div>
       </h1>
     </div>

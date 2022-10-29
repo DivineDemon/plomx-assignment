@@ -1,6 +1,9 @@
 <template>
   <div class="w-[600px] h-[600px] m-5">
-    <span class="flex flex-row mb-5 text-xs text-gray-400">
+    <span
+      class="flex flex-row mb-5 text-xs text-gray-400 cursor-pointer"
+      @click="$emit('back')"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
