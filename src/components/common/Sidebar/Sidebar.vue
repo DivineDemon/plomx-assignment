@@ -238,6 +238,8 @@ export default {
     },
     save() {
       if (this.saved) {
+        this.formData.id = Math.random(1, 10000000);
+        this.formData.type = this.active;
         this.setInspectionChecks(this.formData);
         this.formData = {
           location: "",

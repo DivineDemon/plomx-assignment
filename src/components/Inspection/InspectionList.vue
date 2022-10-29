@@ -20,7 +20,7 @@
           <SidebarToggle @toggle="$emit('toggle')" text="Add check" />
         </div>
         <div v-for="(checks, index) in getAllInspectionChecks" :key="index">
-          <InspectionItem />
+          <InspectionItem :checks="checks" />
         </div>
       </div>
     </div>
