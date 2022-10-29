@@ -25,23 +25,26 @@
           <span>Barcode check</span>
         </h1>
         <div class="relative">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6 text-gray-600"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-            />
-          </svg>
+          <button class="cursor-pointer" @click="toggleActionList">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 text-gray-600"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </button>
           <!-- Dropdown -->
           <div
-            class="text-sm font-semibold flex flex-col space-y-2 border-2 border-gray-400 p-2 sticky top-0 left-0 w-48 z-50 bg-white"
+            v-if="actionList"
+            class="flex text-sm font-semibold flex-col space-y-2 border-2 border-gray-400 p-2 absolute top-6 right-2 w-48 z-50 bg-white"
           >
             <p class="flex flex-row space-x-3 items-center">
               <svg
@@ -106,6 +109,11 @@ import { mapMutations } from "vuex";
 
 export default {
   name: "InspectionItem",
+  data() {
+    return {
+      actionList: false,
+    };
+  },
   props: {
     checks: Object,
   },
@@ -113,6 +121,9 @@ export default {
     ...mapMutations(["removeInspectionChecks"]),
     deleted() {
       this.removeInspectionChecks(this.checks.id);
+    },
+    toggleActionList() {
+      this.actionList = !this.actionList;
     },
   },
 };

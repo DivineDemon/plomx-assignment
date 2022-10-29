@@ -220,7 +220,6 @@ export default {
     ...mapMutations(["setInspectionChecks"]),
     setActive(type) {
       this.active = type;
-      console.log(this.active);
     },
     showForm() {
       switch (this.active) {
