@@ -86,7 +86,7 @@
             :class="{ 'order-1': expectedValue }"
           ></div>
           <div>
-            <p class="font-semibold">
+            <p class="font-semibold mr-0.5">
               {{ expectedValue ? "YES" : "NO" }}
             </p>
           </div>
