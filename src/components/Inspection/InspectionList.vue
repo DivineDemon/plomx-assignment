@@ -19,7 +19,9 @@
           <h1 class="font-bold flex-1">Inspection checks</h1>
           <SidebarToggle @toggle="$emit('toggle')" text="Add check" />
         </div>
-        <InspectionItem />
+        <div v-for="(checks, index) in getAllInspectionChecks" :key="index">
+          <InspectionItem />
+        </div>
       </div>
     </div>
   </div>
